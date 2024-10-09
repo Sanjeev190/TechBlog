@@ -1,0 +1,71 @@
+{{#if loggedIn}}
+<div class="d-flex justify-content-center mb-2">
+<button type="button" class="btn btn-primary mt-2 d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#blogModal">
+  Add New Blog
+</button>
+</div>
+
+ <div class="blog-grid">
+  <div class="blog-card card shadow-sm mb-4">
+        <div id="blogContainer" class="row">
+            <!-- Blogs will be dynamically inserted here -->
+        </div>
+        </div>
+    </div>
+ {{!-- {{#each blogs}}
+ <div class="blog-card card shadow-sm mb-4"></div>
+    <!-- Top section with title, username, and created at -->
+    <div class="card-header bg-secondary text-white">
+      <div class="d-flex justify-content-between">
+        <h3 class="blog-title mb-0">{{this.title}}</h3>
+        <p class="blog-author mb-0">By: {{this.user.username}} in {{this.createdAtFormatted}}</p>
+      </div>
+    </div>
+    
+    <!-- Bottom section with content -->
+    <div class="card-body bg-white text-dark">
+      <p class="blog-text">{{this.content}}</p>
+    </div>
+  </div>
+</div>
+   {{/each}} --}}
+
+<!-- Modal -->
+<div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="blogModalLabel">Add New Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- Modal Body (Form) -->
+      <div class="modal-body">
+        <form id="blogForm">
+          <div class="mb-3">
+            <label for="blogTitle" class="form-label">Blog Title</label>
+            <input type="text" class="form-control" id="blogTitle" placeholder="Enter blog title" required>
+          </div>
+          <div class="mb-3">
+            <label for="blogContent" class="form-label">Content</label>
+            <textarea class="form-control" id="blogContent" rows="3" placeholder="Enter blog content" required></textarea>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" form="blogForm" class="btn btn-primary">Add Blog</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+{{else}}
+<a href="/login">You must login first to view this page</a>
+
+{{/if}}
+<script src="/js/blog.js"></script>

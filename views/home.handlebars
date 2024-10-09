@@ -1,0 +1,26 @@
+          <div class="blog-grid">
+              <div class="card-header  text-dark">
+      <div class=" d-flex justify-content-center">
+           <h3 class="blog-title">This are my blogs</h3>
+            </div>
+            </div>
+            </div>
+            {{#each blogs}}
+           
+            <div class="blog-grid">
+  <div class="blog-card card shadow-sm mb-4">
+    <!-- Top section with title, username, and created at -->
+    <div class="card-header bg-secondary text-white">
+      <div class="d-flex justify-content-between">
+        <h3 class="blog-title mb-0">{{this.title}}</h3>
+        <p class="blog-author mb-0">By: {{this.user.username}} in {{this.createdAtFormatted}}</p>
+      </div>
+    </div>
+    
+    <!-- Bottom section with content -->
+    <div class="card-body bg-white text-dark">
+      <p class="blog-text">{{this.content}}</p>
+    </div>
+  </div>
+</div>
+   {{/each}}
