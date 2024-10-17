@@ -9,6 +9,7 @@
            
             <div class="blog-grid">
   <div class="blog-card card shadow-sm mb-4">
+    <a href="/{{this.id}}">
     <!-- Top section with title, username, and created at -->
     <div class="card-header bg-secondary text-white">
       <div class="d-flex justify-content-between">
@@ -21,6 +22,8 @@
     <div class="card-body bg-white text-dark">
       <p class="blog-text">{{this.content}}</p>
     </div>
+    
   </div>
 </div>
+
    {{/each}}
