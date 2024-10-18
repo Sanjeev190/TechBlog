@@ -32,5 +32,6 @@
  1) If you have any question feel free to contact me at email:sanjeevthapa961@gmail.com
 
   2) you can also visit my github profile at https://github.com/sanjeev190
+  3) link to the render is https://techblog-2-ty8v.onrender.com/
   
   
